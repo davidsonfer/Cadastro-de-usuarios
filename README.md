@@ -8,4 +8,4 @@ Django (instalável via pip install django)
 PostgreSQL (com um banco de dados criado para o projeto)
 
 A primeira pagina contém um formulário para colher os dados 'Nome' e 'Idade',
-Após clicar no botão 'Enviar', será levado a uma página com os nomes inseridos no banco de dados em listados em uma tabela.
+Após clicar no botão 'Enviar', será levado a uma página com os nomes inseridos no banco de dados, listados em uma tabela.
