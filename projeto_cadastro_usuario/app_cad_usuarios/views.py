@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Usuario
 
 def home(request):
@@ -12,6 +12,16 @@ def usuarios(request):
     novo_usuario.idade = request.POST.get('idade')
     novo_usuario.save()
     # Exibir todos os usuários já cadastrados em uma nova página
+    usuarios = {
+    'usuarios': Usuario.objects.all()
+    }
+    # Retornar os dados para a página de listagem de usuarios
+    return render(request,'usuarios/usuarios.html', usuarios)
+
+
+def deletar_usuario(request, id):
+    user = Usuario.objects.get(id_usuario=id)
+    user.delete()
     usuarios = {
     'usuarios': Usuario.objects.all()
     }

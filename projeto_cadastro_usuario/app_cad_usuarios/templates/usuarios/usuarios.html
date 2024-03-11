@@ -7,12 +7,14 @@
                 <th>id</th>
                 <th>nome</th>
                 <th>idade</th>
+                <th>Excluir</th>
             </tr>
             {% for usuario in usuarios %}
                 <tr>
                     <td>{{usuario.id_usuario}}</td>
                     <td>{{usuario.nome}}</td>
                     <td>{{usuario.idade}}</td>
+                    <td><a class='btn btn-danger' href='{% url "deletar_usuario" usuario.id_usuario %}'>Excluir</a></td>
                 </tr>
             {% endfor %}
         </table>
